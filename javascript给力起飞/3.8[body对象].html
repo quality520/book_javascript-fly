@@ -1,0 +1,29 @@
+<html>
+	<head>
+		<meta  http-equiv="content-Type" content="text/html" charset="utf-8" />
+		<title>body对象</title>
+		<style type="text/css">
+			#text{
+				position: absolute;
+				left:50px;top:50px;
+				background-color: #F00;
+				height:50px;
+				width: 250px;
+			}
+		</style>
+		<script type="text/javascript" >
+			function textScroll(){
+				text.style.top=document.body.scrollTop+50;
+				text.style.left=document.body.scrollLeft;
+			}
+		</script>
+		
+	</head>
+	<body onscroll="textScroll()" >
+		<textarea rows="100" cols="500" id="textarea1" name="textarea1" ></textarea>
+		<div id="text">
+			拉动右边滚动条，我也会动的！
+		</div>
+		
+	</body>
+</html>

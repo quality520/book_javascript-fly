@@ -1,0 +1,52 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>下拉选项</title>
+		<script type="text/javascript">
+			function choose(){
+				var ballList = document.getElementById("Ball").value;
+				var playerList = document.getElementById("player");
+
+				playerList.options.length = 0;
+				if(ballList == "篮球"){
+					var JD = new Option("乔丹","乔丹");
+					player.options.add(JD);
+					var KB = new Option("科比","科比");
+					player.options.add(KB);
+					var KD = new Option("杜兰特","杜兰特");
+					player.options.add(KD);
+					var LB = new Option("詹姆斯","詹姆斯");
+					player.options.add(LB);
+				}
+				else if(ballList == "足球"){
+
+					var CL = new Option("C罗","C罗");
+					player.options.add(CL);
+					var MS = new Option("梅西","梅西");
+					player.options.add(MS);
+					var KK = new Option("卡卡","卡卡");
+					player.options.add(KK);
+					var BK = new Option("贝克汉姆","贝克汉姆");
+					player.options.add(BK);
+				}
+			}
+		</script>
+	</head>
+	<body>
+		体育项目：
+		<select id="Ball" onChange="choose()">
+			
+			<option value="篮球">篮球</option>
+			<option value="足球">足球</option>
+		
+		</select>
+		<br>
+		该体育项目的明星：&nbsp;
+		<select id="player">
+			
+			<option value="乔丹">乔丹</option>
+			<option value="科比">科比</option>
+			<option value="杜兰特">杜兰特</option>
+		</select>
+	</body>
+</html>

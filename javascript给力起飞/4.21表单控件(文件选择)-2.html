@@ -1,0 +1,43 @@
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>文件选择与文本区域</title>
+		<style type="text/css">
+			*{margin: 0;padding:5px;font-size: 16px;}
+			body{}
+			table{margin:80 auto;border-collapse:collapse;}
+		</style>
+	</head>
+	<body>
+		<form name="form" action="" method="post" enctype="multipart/form-data">
+			<table border="1" cellspacing="1" cellpadding="6" width="450" >
+				<tr><th colspan="2">用户注册--基本信息</th></tr>
+				<tr><td align="right">用户名：</td><td><input type="text" name="userName" value="create" id="userName" size="15" maxlength="15" /></td></tr>
+				<tr><td align="right">密&nbsp;&nbsp;码：</td><td><input type="password" id="passWord" name="passWord" value="" size="15" maxlength="15" /></td></tr>
+				<tr><td align="right">照&nbsp;&nbsp;片：</td><td><input type="file" name="myImg" id="myImg" size="25" maxlength="255" /></td></tr>
+				<tr><td>说&nbsp;&nbsp;明：</td><td><textarea id="text_explain" rows="5" cols="45" onFocus="checkTextarea()">请在这里输入个人简介</textarea></td></tr>
+				<tr  >
+					<td colspan="2" align="center" >
+						<input type="button" id="submit" name="submit" value="提交" />
+						<input type="reset" id="reset" name="reset" value="重置"/>
+					</td>
+				</tr>
+			</table>
+		</form>
+	</body>
+</html>
+<script type="text/javascript">
+	function checkTextarea(){
+		var tContent = document.getElementById('text_explain');
+		if(tContent.value == "请在这里输入个人简介")
+			{
+			tContent.value = "";
+		}
+	}
+	/*function checkTextarea(){
+		
+		if(document.form.text_explain.value == "请在这里输入个人简介"){
+			document.form.text_explain.value = "";
+		}
+	}*/
+</script>

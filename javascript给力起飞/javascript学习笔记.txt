@@ -1,0 +1,84 @@
+
+
+
+
+
+
+数组：
+var a=new array();
+数组常用函数：
+concat追加
+a.concat(b)
+join
+使用指定的间隔符连起来
+a.concat(1,2,3).join("*");
+pop
+删除数组最后一个元素，并返回该元素
+a.pop();
+shift
+删除数组的第一个元素，并返回该元素
+a.shift();
+unshift
+往数组最前面添加元素，并返回新数组长度
+a.shift();
+
+sort
+数组排序,并不是大小排序，而是第一个字符的ASCII码对比
+a.sort();
+reverse
+对数组进行反排序
+
+slice
+返回数组片段
+a.slice(1,2);输出下标1跟2之间的元素
+
+splice
+删除数组片段
+a.splice(1，2);删除下标1跟2之间的元素，并返回删除的元素
+
+toString
+把数组转换为字符串，不只是数组，所有对象均可使用该方法
+a.toString();
+
+
+DOM
+window对象
+   属性
+window.closed返回窗口是否已被关闭
+window.name 设置或返回窗口或者框架的名称
+window.document对document对象的只读引用，该文档表示浏览器窗口中的HTML文档
+window.history对history对象的只读引用，该对象包含当前浏览器访问过的URL信息
+window.location对于窗口或匡济的location对象，保航但钱相关的URL信息
+window.screen对screen对象的只读引用，该对象包含有关客户的屏幕和显示性能信息
+window.status设置或者读取窗口状态栏的文本信息
+window.innerheight返回窗口的文档显示区的高度
+window.innerwidth返回窗口的文档显示区的宽度
+window.openre返回对创建此窗口的窗口的引用，当在界面A中打开另外一个窗口B的时候，可以在页面B中使用该属性得到页面A的信息
+window.parent返回父窗口，一般在框架中使用
+window.screenLeft/window.screenTop只读整数，声明串口的左上角在屏幕上的X坐标和Y坐标，IE/SAFARI/OPERA支持screenLeft与screenTop，而FF和chrome支持screenX与scrrenY
+window对象的常用方法
+alert();显示包含指定信息的对话框
+confirm();显示一个带指定信息的确认狂，确认框带确认与取消按钮，选择不同按钮返回不同结果
+prompt();显示一个带提示信息的输入框
+parseInt();将指定字符串转换为整型数字
+parsetFloat();将指定字符串转换为浮点型数字
+open();打开一个新窗体，并加载指定的HTML文档
+close();关闭当前的浏览器窗体
+setTimeout();设定定时器：在指定毫秒值之后执行某个指定的函数
+clearTimeout();取消某个定时器
+
+window对象事件
+onload 装载完成后触发
+onunload 退出时触发
+onbeforeunload退出时触发，会发生在onunload之前
+onhelp 显示帮助时触发
+onfocus获取焦点时触发
+onblur 失去焦点时触发
+onerror 错误时触发
+onresize改变大小时触发
+onscroll 滚动时触发
+onmove当对象移动时触发
+
+
+
+

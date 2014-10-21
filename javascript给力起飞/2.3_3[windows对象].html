@@ -1,0 +1,70 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>windows对象</title>
+		<link rel="stylesheet" type="text/css" href="">
+		<script type=text/javascript>
+			function message(){
+				var text=confirm("你今天开心吗？");
+				if (text) {
+					alert("YES!开心！");
+				}
+				else
+				{
+					alert("NO!不开心");
+				}
+			}
+			function Hname(){
+				var name=prompt("请输入你的姓名！");
+				if (name){
+					document.write("hello！"+name);
+				}
+				else{
+					window.open("http://www.baidu.com" );
+				}
+			}
+			function winClose(){
+				var myWindow=confirm("确定关闭window窗口吗？");
+				if(myWindow)
+				{
+					window.close();
+				}
+
+			}
+			function startTime(){
+				var today = new Date();
+				var h= today.getHours();
+				var m = today.getMinutes();
+				var s = today.getSeconds();
+				m = checkTime(m);
+				s = checkTime(s);
+				document.getElementById('nowTime').innerHTML = h + ":" + m  + ":" + s;
+				t = setTimeout('startTime()',500);
+			}
+			function checkTime(i)
+			{
+				if(i < 10)
+				{i = "0" + i;}
+				return i;
+			}
+			function stopTime(){
+				clearTimeout(t);
+			}
+		</script>
+	</head >
+	<body onload="alert('欢迎来到主页！！！')" onunload="alert('再见！！！')">
+		<input type="button" value="开心or不开心？" onclick="message()">
+	<br/>
+	 	<input type="button" value="NAME？" onclick="Hname()"> 
+	<br/>
+		<input type="button" value="window" onclick="winClose()"> 
+	<br/>
+
+		<div id="nowTime" onload="startTime()" width="200" height="100">
+
+		</div> 
+		<input type="button" value="获取时间" onclick="startTime()"> 
+		<br/>
+		<input type="button" value="STOP" onclick="stopTime()"> 
+	</body>
+</html>

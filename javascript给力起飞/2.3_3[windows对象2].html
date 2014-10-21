@@ -1,0 +1,78 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Checked</title>
+		<style type="text/css">
+			#btnDiv{
+				width:400px; height: 400px;
+				border: 1px solid #000;
+			}
+		</style>
+		<script type="text/javascript">
+		//	function choose(val){
+		//		var btnChoose = document.getElementsByName("cbox");
+		//		var str= "";
+		//		
+	//			for (var i=0; i<btnChoose.length;i++)
+	//			{
+	//				btnChoose[i].checked=val;
+	//				str = str + btnChoose[i].value +","
+	//			}
+//
+//				alert(str);
+//
+//			}
+	//		function addTxt(){
+	//			var txt = document.createElement("input");
+	//			txt.type="text";
+	//			txt.value="新添加文本框";
+	//			var div = document.getElementById("disDiv");
+	//			div.appendChild(txt);
+	//		}
+			function delBtn(){
+				var div = document.getElementById("btnDiv");
+				var childList = div.childNodes;
+				if(childList!=null && childList.length>0)
+				{
+					div.removeChild(childList[0]);
+				}
+				else{
+					alert("层中已经没有可删除的按钮了！");
+				}
+			}		
+		</script>
+	</head>
+	<body>
+	<!--	<div id="con">
+			
+			<br/>
+			<input type="checkbox" name="cbox" value="1"/>1
+			<input type="checkbox" name="cbox" value="2"/>2
+			<input type="checkbox" name="cbox" value="3"/>3
+			<input type="checkbox" name="cbox" value="4"/>4
+			<input type="checkbox" name="cbox" value="5"/>5
+			<input type="checkbox" name="cbox" value="6"/>6
+			<input type="checkbox" name="cbox" value="7"/>7
+			<br/>
+			<input type="button" name="btn" value="全选" onclick="choose(true)"/>/
+			<input type="button" name="btn" value="全不选" onclick="choose(false)"/>
+			
+			<div id="disDiv">
+				<input type="button" name="txtBox" value="新添加文本框" onclick="addTxt()"/>
+			</div>
+		</div>  -->
+		<div id="btnDiv">
+			<input type="button" value="button1" name="btn" />
+			<input type="button" value="button2" name="btn" />
+			<input type="button" value="button3" name="btn" />
+			<input type="button" value="button4" name="btn" />
+			<input type="button" value="button5" name="btn" />
+
+			
+			
+
+
+		</div>
+		<input type="button" value="删除按钮" name="btn" onclick="delBtn()" />
+	</body>
+</html>

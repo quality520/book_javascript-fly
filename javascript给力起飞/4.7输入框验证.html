@@ -1,0 +1,56 @@
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>输入框验证</title>
+		
+	</head>
+	<body>
+		<form name="myForm" action="#" post="get" onsubmit="return checkForm(this)" >
+			<table id="myForm-td" align="center">
+				<tr align="center" ><th colspan="2">新用户注册<hr size="1"/></th></tr>
+				<tr><td align="right">用户名：</td><td><input type="text" name="userName" id="userName" value="请输入用户名" size="20" />
+				</td></tr>
+				<tr><td align="right">密&nbsp;&nbsp;码：</td><td><input type="password" name="userPwd" id="userPwd" value="" size="20"/></td></tr>
+				<tr><td align="right">邮&nbsp;&nbsp;箱：</td><td><input type="text" name="userMail" id="userMail" value="请输入绑定的邮箱!" /></td></tr>
+				<tr><td colspan="2" align="center">
+					<hr size="1"/>
+					<input type="submit" name="submitBtn" id="submitBtn" value="提交" />
+					<input type="reset" name="resetBtn" id="resetBtn" value="重置" /></td>
+				</tr>
+			</table>
+		</form>
+	</body>
+</html>
+		<script type="text/javascript">
+			var dom = document.getElementById('userName');
+			dom.onclick = function(){
+				if( dom.value != null)
+				{
+					dom.value = "";
+				}
+			}
+			var domUsermail = document.getElementById('userMail');
+			domUsermail.onclick = function(){
+				if( domUsermail.value != null)
+				{
+					domUsermail.value = "";
+				}
+			}
+			/*//验证不能为空的字段
+			function checkForm(form){
+				//构建一个长度和文本框个数相同的数组
+				var checkForms = new Array("userMail","userPwd"){
+					for(var i=0;i<checkForms.length;i++)
+					{
+						if(form.elements[checkForms[i]].value="")
+						{
+							//当文本框为空提示输入
+							alert("请输入\"" + form.elements[checkForms[i]].title + "\"!");
+							form.elements[checkForms[i]].focus();//鼠标聚焦
+							return false;
+						}
+
+					}
+				}
+			}*/
+		</script>

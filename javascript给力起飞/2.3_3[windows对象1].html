@@ -1,0 +1,86 @@
+<!-- <html>
+	<head>
+		<meta charset="utf-8">
+		<title>document</title>
+		<script type="text/javascript">
+			/*function queryById(){
+				//通过ID查询文本框元素
+				var txt = document.getElementById('account');
+				alert(txt.value);
+			} */
+
+			function sumMation(){
+				
+				//alert(typeof (Txt1));
+				Txt1 = parseInt(Txt1)
+
+				alert(Txt1);
+			}
+		</script>
+	</head>
+	<body>
+		 <div id="textCon">
+			<input type="text" id="account" />
+		</div>
+		<br />
+			<input type="button" value="通过ID查询" onclick="queryById()" /> 
+		<input type="text" value="" id="Txt1"/>
+			+
+		<input type="text" value="" id="Txt2"/>
+
+		<input type="button" value="求和" id="Btn1" onclick="sumMation()" />
+	</body>
+</html>
+
+
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Query</title>
+		<script type="text/javascript">
+			function valueQuery(){
+				var Query = document.getElementById("TXT");
+				alert(Query.value);
+			}
+		</script>
+	</head>
+	<body>
+		<div id="contanier">
+			<input type="txt" value="" id="TXT">
+			<br />
+			<input type="button" value="查询" onclick="valueQuery()">
+		</div>
+
+	</body>
+</html>  -->
+
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>getElementsByName</title>
+		<script type="text/javascript">
+			function sumSport(){
+				var list = document.getElementsByName("sport");
+				var len = list.length;
+				var str = "";
+				for(var i = 0; i < list.length; i++)
+				{
+					str = str + list[i].value + ",";
+				}
+				alert("运动类型可选项为："+len+"\n 列表："+ str);
+			}
+		</script>
+	</head>
+	<body>
+		<div id="container">
+			<input type="checkbox" name="sport" value="Basketball"/>篮球
+			<input type="checkbox" name="sport" value="Football"/>足球
+			<input type="checkbox" name="sport" value="volleyball"/>排球
+			<input type="checkbox" name="sport" value="Run"/>跑步
+			<br/>
+			<input type="button" name="accounting" value="总计" onclick="sumSport()">
+		</div>
+	</body>
+</html>

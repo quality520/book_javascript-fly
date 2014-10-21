@@ -1,0 +1,39 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>mouse事件</title>
+		<script type="text/javascript">
+			function test(){
+				var str = "";
+				str += "事件类型:" + event.type + "\n";
+				str += "鼠标X坐标:" + event.x + "\n";
+				str += "鼠标Y坐标:" + event.y + "\n";
+
+				if(event.button == 0)
+				{
+					str += "鼠标击键：左键\n";
+				}
+				else if(event.button == 2)
+				{
+					str += "鼠标击键：右键\n";
+				}
+				else if(event.button == 4)
+				{
+					str += "鼠标击键：中键\n";
+				}
+
+				//得到触发对象
+				var but= event.srcElement;
+				str +=but.type + ":" + but.value + "\n";
+				alert(str);
+
+
+			}
+		</script>
+	</head>
+	<body>
+		
+			<input type="button" value="查看鼠标事件" onClick="test()">
+		
+	</body>
+</html>

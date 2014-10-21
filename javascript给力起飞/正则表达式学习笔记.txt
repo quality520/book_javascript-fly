@@ -1,0 +1,76 @@
+3.14.3 
+使用构造函数RegExp()创建正则表达式的一般格式为：
+var regexname = new RegExp("pattern"[,"flags"]);
+pattern,flags参数都可以是字符串
+eg:
+    var country = new RegExp("中国");
+    var reobj = new RegExp("loveme","ig");
+    var str = "中*国";
+    var country = new RegExp(str);//使用字符串变量定义正则表达式
+正则表达式对象RegExp提供了两个方法：
+	test();
+	test(string);测试字符串string是否包含了匹配该正则表达式的子串，如果包含了这样的子串，那么函数返回ture，否则返回false。
+	exec();
+	exec(string);在字符串string中进行函数的匹配搜索，并将结果保存在一个数组中返回；如果没有找到匹配的子串，那么返回null；
+3.14.4
+正则表达式语法参考（文字量方法/使用构造函数RegExp()）
+1，使用文字量方法创建正则表达式：
+	一般格式：var regexname = /pattern/flags
+		pattern为该正则表达式对象实例的匹配模式，flags是可选参数，其可选意义如下
+			i:忽略大小写/g：全局匹配/m:进行多行匹配
+3.14.5
+1,String对象中与正则表达式有关的方法
+	match(regexp)
+	search(regexp)
+2,普通注册验证：
+校验用户姓名：只能输入1~30个以字母开头的字符串
+校验密码：只能输入6~20个字母、数字、下划线
+eg:
+	function isTrueName(s)
+	{
+		var patrn = /^[a-zA-Z]{1,30}$/;
+		if(!patrn.exec(s))
+		{
+			return false;
+		}
+		return true;
+	}
+	function isPasswd(s)
+	{
+		var parrn = /^(\w){6,20}$/;
+		if (!patrn.exec(s)){
+			return false;
+		}
+		return true;
+	}
+3.14.6 
+常见的验证方式
+1,校验是否全由数字组成
+	function isDigit(s)
+	{
+		var patrn = /^[0-9]{1,20}$/;
+		if(!patrn.exec(s))
+		{
+			return false;
+		}
+			return true;
+	}
+2,校验用户名：只能输入1~30个以字母开头的字符串
+	function isTrueName(s)
+	{
+		var patrn = /^[a-zA-Z]{1,30}$/;
+		if(!patrn.exec(s))
+		{
+			return false;
+		}
+		return true;
+	}
+3，校验密码：只能输入字母、数字、下划线
+	function isPasswd(s)
+	{
+		var parrn = /^(\w){6,20}$/;
+		if (!patrn.exec(s)){
+			return false;
+		}
+		return true;
+	}
